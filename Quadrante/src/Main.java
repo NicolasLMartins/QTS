@@ -5,12 +5,19 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
-
-        System.out.print("Coordenada: ");
         Coord ponto = new Coord();
 
-        
+        System.out.println("Coordenada: ");
+        System.out.print("X: ");
+        float x = read.nextFloat();
+        ponto.setX(x);
+
+        System.out.print("Y: ");
+        float y = read.nextFloat();
+        ponto.setY(y);
 
         read.close();
+
+        ponto.quadrante();
     }
 }
