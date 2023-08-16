@@ -24,6 +24,7 @@ public class Main {
             System.out.printf("Preço da %da peça: ", i + 1);
             pecas[i].setPreco(read.nextFloat());
         }
+        
         read.close();
 
         for (Peca peca : pecas) {
