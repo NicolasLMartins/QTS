@@ -1,8 +1,11 @@
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Peca;
+
 public class Main {
     public static void main(String[] args) throws Exception {
+
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
         

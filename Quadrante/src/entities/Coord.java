@@ -1,11 +1,13 @@
+package entities;
+
 public class Coord {
+
     private float x = 0f;
     private float y = 0f;
 
     public void setX(float x) {
         this.x = x;
     }
-
     public void setY(float y) {
         this.y = y;
     }

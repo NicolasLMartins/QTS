@@ -1,10 +1,14 @@
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Coord;
+
 public class Main {
     public static void main(String[] args) throws Exception {
+
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
+        
         Coord ponto = new Coord();
 
         System.out.println("Coordenada: ");

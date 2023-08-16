@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) throws Exception {
+        
         String textoExemplo = "abcde FGHIJ ABC abc DEFG     ";
         
         String t01 = textoExemplo.toLowerCase();
