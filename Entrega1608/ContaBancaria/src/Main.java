@@ -15,6 +15,7 @@ public class Main {
         int numero = read.nextInt();
 
         System.out.print("Insira o nome do titular: ");
+        read.nextLine();
         String titular = read.nextLine();
 
         System.out.print("Deseja efetuar um depósito inicial (s/n)? ");
@@ -28,8 +29,16 @@ public class Main {
         } else {
             conta = new Conta(numero, titular);
         }
-
-        System.out.println("");
+        
+        System.out.printf("%nDados da conta: %n%s%n", conta.toString());
+        
+        System.out.printf("%nInsira um valor para depósito: ");
+        conta.deposito(read.nextDouble());
+        System.out.printf("Dados da conta atualizados: %n%s%n", conta.toString());
+        
+        System.out.printf("%nInsira um valor para saque: ");
+        conta.saque(read.nextDouble());
+        System.out.printf("Dados da conta atualizados: %n%s%n", conta.toString());
 
         read.close();
     }

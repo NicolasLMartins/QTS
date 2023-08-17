@@ -6,6 +6,10 @@ public class Conta {
     private String titular;
     private double saldo;
 
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
     public Conta(int numero, String titular) {
         this.numero = numero;
         this.titular = titular;
@@ -24,6 +28,6 @@ public class Conta {
     }
 
     public String toString() {
-        return String.format("Conta %d, Titular: %s, Saldo: R$ %.2f");
+        return String.format("Conta %d, Titular: %s, Saldo: R$ %.2f", this.numero, this.titular, this.saldo);
     }
 }
