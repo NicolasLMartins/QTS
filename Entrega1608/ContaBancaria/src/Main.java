@@ -23,9 +23,9 @@ public class Main {
 
         if (depInicial == 's') {
             System.out.print("Insira o valor do depósito inicial: ");
-            // double saldoInicial = read.nextDouble();
-
             conta = new Conta(numero, titular, read.nextDouble());
+            // double saldoInicial = read.nextDouble();
+            // conta = new Conta(numero, titular, saldoInicial);
         } else {
             conta = new Conta(numero, titular);
         }
