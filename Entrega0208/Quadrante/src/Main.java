@@ -21,7 +21,7 @@ public class Main {
         ponto.setY(y);
 
         read.close();
-
+        
         ponto.quadrante();
     }
 }
