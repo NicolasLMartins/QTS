@@ -12,10 +12,10 @@ public class Main {
         System.out.println("Insira o raio da circunferência: ");
         double raio = read.nextDouble();
 
+        read.close();
+
         System.out.printf("Circunferência: %.2f%n", Calculadora.circunferencia(raio));
         System.out.printf("Volume: %.2f%n", Calculadora.volume(raio));
         System.out.printf("Valor de PI: %.5f%n", Calculadora.PI);
-        
-        read.close();
     }
 }

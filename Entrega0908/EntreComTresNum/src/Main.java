@@ -10,6 +10,8 @@ public class Main {
         int b = read.nextInt();
         int c = read.nextInt();
 
+        read.close();
+
         if (a > b && a > c) {
             System.out.printf("Maior: %d%n", a);
         } else if (b > c) {
@@ -17,7 +19,5 @@ public class Main {
         } else {
             System.out.printf("Maior: %d%n", c);
         }
-        
-        read.close();
     }
 }
