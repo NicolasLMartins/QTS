@@ -14,5 +14,3 @@ public class Hospede {
         return String.format("%s, %s ", this.nome, this.email);
     }
 }
-
-teste
