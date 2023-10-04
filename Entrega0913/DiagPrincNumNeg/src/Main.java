@@ -20,8 +20,22 @@ public class Main {
             System.out.println();
         }
 
+        System.out.println("Diagonal principal: ");
         for (int i = 0; i < ordem; i++) {
             System.out.printf("%d ", matriz[i][i]);
         }
+
+        int contador = 0;
+        for (int i = 0; i < ordem; i++) {
+            for (int j = 0; j < ordem; j++) {
+                if (matriz[i][j] < 0) {
+                    contador++;
+                }
+            }
+        }
+
+        System.out.printf("\nNúmeros negativos = %d", contador);
+
+        read.close();
     }
 }
