@@ -20,7 +20,7 @@ public class Program {
         int num = read.nextInt();
 
         for (int i = 0; i < num; i++) {
-            System.out.printf("EMPLOYEE #%d: \n", i + 1);
+            System.out.printf("\nEMPLOYEE #%d DATA: \n", i + 1);
             System.out.print("Outsourced (y/n)? ");
             char ch = read.next().charAt(0);
             System.out.print("Name: ");
@@ -41,6 +41,12 @@ public class Program {
             }
         }
         
+        System.out.println("\nPAYMENTS: ");
+
+        for (Employee emp : list) {
+            System.out.printf("%s - $ %.2f\n", emp.getName(), emp.payment());
+        }
+
         read.close();
     }
 }
