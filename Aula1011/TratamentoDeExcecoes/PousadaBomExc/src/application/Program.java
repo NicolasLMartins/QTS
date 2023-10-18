@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 import model.entities.Reservation;
+import model.exceptions.DomainException;
 
 public class Program {
     public static void main(String[] args) throws ParseException {
@@ -26,7 +27,7 @@ public class Program {
             Date checkOut = sdf.parse(read.next());
             
             Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
-            reservation.updateDates(checkIn, checkOut);
+            // reservation.updateDates(checkIn, checkOut);
             System.out.printf("Reservation: %s\n", reservation);
             
             System.out.println("\nEnter date to update the reservation: ");
@@ -43,7 +44,7 @@ public class Program {
 
         } catch (ParseException e) {
             System.out.println("Invalid date format!");
-        } catch (IllegalArgumentException e) {
+        } catch (DomainException e) {
             System.out.printf("Error in reservation: %s\n", e.getMessage());
         }
     }
