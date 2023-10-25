@@ -11,8 +11,11 @@ import org.junit.Test;
 import negocio.Cliente;
 import negocio.GerenciadorClientes;
 
-public class GerenciadorClientesTest_Ex02 {
-    
+// Classe de testes criada para  garantir o funcionamento das principais operações sobre clientes, realizadas pela classe GerenciadorClientes.
+
+public class GerenciadorClientesTest_Ex03 {
+
+    // Teste básico da pesquisa de um cliente a partir de seu ID.
     @Test
     public void testPesquisaCliente() {
 
@@ -37,6 +40,7 @@ public class GerenciadorClientesTest_Ex02 {
         // assertThat(cliente.getEmail(), is("diegoom2001@gmail.com"));
     }
     
+    // Teste básico da remoção de um cliente a partir de seu ID.
     @Test
     public void testRemoveCliente() {
 
