@@ -61,7 +61,7 @@ public class GerenciadorContasTest_Ex04 {
         boolean sucesso = gerContas.transfereValor(1, 200.0, idConta02);
 
         // VERIFICAÇÃO
-        assertFalse(sucesso);
+        assertTrue(sucesso);
         assertThat(cc1.getSaldo(), is(-100.0));
         assertThat(cc2.getSaldo(), is(200.0));
     }
