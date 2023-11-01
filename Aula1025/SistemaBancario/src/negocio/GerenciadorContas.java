@@ -64,7 +64,7 @@ public class GerenciadorContas {
 		// if(contaOrigem.getSaldo() >= valor) {
 			contaDestino.setSaldo(contaDestino.getSaldo() + valor);
 			contaOrigem.setSaldo(contaOrigem.getSaldo() - valor);
-		// 	sucesso = true;
+			sucesso = true;
 		// }
 	
 		return sucesso;
