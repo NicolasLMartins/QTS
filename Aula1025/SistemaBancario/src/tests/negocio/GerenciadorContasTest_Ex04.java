@@ -20,8 +20,11 @@ public class GerenciadorContasTest_Ex04 {
     public void testTransfereValor() {
 
         // CENÁRIO
-        ContaCorrente cc1 = new ContaCorrente(1, 1000.0, true);
-        ContaCorrente cc2 = new ContaCorrente(2, 200.0, true);
+        int idConta01 = 1;
+        int idConta02 = 2;
+
+        ContaCorrente cc1 = new ContaCorrente(idConta01, 200.0, true);
+        ContaCorrente cc2 = new ContaCorrente(idConta02, 0.0, true);
 
         List<ContaCorrente> contasClientes = new ArrayList<>();
         contasClientes.add(cc1);
@@ -30,11 +33,36 @@ public class GerenciadorContasTest_Ex04 {
         GerenciadorContas gerContas = new GerenciadorContas(contasClientes);
 
         // EXECUÇÃO
-        boolean sucesso = gerContas.transfereValor(1, 100.0, 2);
+        boolean sucesso = gerContas.transfereValor(1, 100.0, idConta02);
 
         // VERIFICAÇÃO
         assertTrue(sucesso);
-        assertThat(cc2.getSaldo(), is(300.0));
-        assertThat(cc1.getSaldo(), is(900.0));
+        assertThat(cc2.getSaldo(), is(100.0));
+        assertThat(cc1.getSaldo(), is(100.0));
+    }
+
+    @Test
+    public void testTransfereValorSaldoInsuficiente() {
+
+        // CENÁRIO
+        int idConta01 = 1;
+        int idConta02 = 2;
+
+        ContaCorrente cc1 = new ContaCorrente(idConta01, 100.0, true);
+        ContaCorrente cc2 = new ContaCorrente(idConta02, 0.0, true);
+
+        List<ContaCorrente> contasClientes = new ArrayList<>();
+        contasClientes.add(cc1);
+        contasClientes.add(cc2);
+        
+        GerenciadorContas gerContas = new GerenciadorContas(contasClientes);
+
+        // EXECUÇÃO
+        boolean sucesso = gerContas.transfereValor(1, 200.0, idConta02);
+
+        // VERIFICAÇÃO
+        assertFalse(sucesso);
+        assertThat(cc1.getSaldo(), is(-100.0));
+        assertThat(cc2.getSaldo(), is(200.0));
     }
 }
