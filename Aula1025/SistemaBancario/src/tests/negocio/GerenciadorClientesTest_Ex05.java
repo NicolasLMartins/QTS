@@ -125,16 +125,31 @@ public class GerenciadorClientesTest_Ex05 {
     @Test
     public void testClienteIdadeAceitavel_04() throws IdadeNaoPermitidaException {
         //CENÁRIO
-        Cliente cliente = new Cliente(1, "Nícolas", 18, "nicolas@concordiasl.com.br", 1, true);
+        Cliente cliente = new Cliente(1, "Nícolas", 17, "nicolas@concordiasl.com.br", 1, true);
 
         //EXECUÇÃO
         try {
             gerClientes.validaIdade(cliente.getIdade());
+            fail("FAIL executado, idade não causa uma exceção!");
         } catch (Exception e) {
             assertThat(e.getMessage(), is(IdadeNaoPermitidaException.MSG_IDADE_INVALIDA));
         }
         
         //VERIFICAÇÃO
         // assertFalse(idadeValida);
+    }
+
+    @Test
+    public void testClienteIdadeAceitavel_05() {
+        //CENÁRIO
+        Cliente cliente = new Cliente(1, "Nícolas", 66, "nicolas@concordiasl.com.br", 1, true);
+
+        //EXECUÇÃO
+        try {
+            gerClientes.validaIdade(cliente.getIdade());
+            fail("FAIL executado, idade não causa uma exceção!");
+        } catch (Exception e) {
+            assertThat(e.getMessage(), is(IdadeNaoPermitidaException.MSG_IDADE_INVALIDA));
+        }
     }
 }
