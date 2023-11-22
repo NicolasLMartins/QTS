@@ -2,12 +2,20 @@ package calculo;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import exceptions.CantDivideByZeroException;
 
 public class CalculadoraTest {
-    
+
+    private Calculadora calc;
+
+    @Before
+    public void setUp() {
+        calc = new Calculadora();
+    }
+
     // Tests if the Calculadora's method sum's result is correct
     @Test
     public void mustSumTwoValues() {
@@ -15,7 +23,7 @@ public class CalculadoraTest {
         int a = 10;
         int b = 2;
 
-        Calculadora calc = new Calculadora();
+        // Calculadora calc = new Calculadora();
     
         //EXECUÇÃO
         int resultado = calc.sum(a, b);
@@ -31,7 +39,7 @@ public class CalculadoraTest {
         int a = 10;
         int b = 2;
 
-        Calculadora calc = new Calculadora();
+        // Calculadora calc = new Calculadora();
     
         //EXECUÇÃO
         int resultado = calc.subtract(a, b);
@@ -47,7 +55,7 @@ public class CalculadoraTest {
         int a = 10;
         int b = 2;
 
-        Calculadora calc = new Calculadora();
+        // Calculadora calc = new Calculadora();
     
         //EXECUÇÃO
         int resultado = calc.multiply(a, b);
@@ -63,7 +71,7 @@ public class CalculadoraTest {
         int a = 10;
         int b = 2;
 
-        Calculadora calc = new Calculadora();
+        // Calculadora calc = new Calculadora();
     
         //EXECUÇÃO
         int resultado = calc.divide(a, b);
@@ -79,7 +87,7 @@ public class CalculadoraTest {
         int a = 10;
         int b = 2;
 
-        Calculadora calc = new Calculadora();
+        // Calculadora calc = new Calculadora();
     
         //EXECUÇÃO
         int resultado = calc.divRemainder(a, b);
@@ -95,7 +103,7 @@ public class CalculadoraTest {
         int a = 10;
         int b = 0;
 
-        Calculadora calc = new Calculadora();
+        // Calculadora calc = new Calculadora();
     
         //EXECUÇÃO
         int resultado = calc.divide(a, b);
