@@ -1,4 +1,4 @@
-package br.com.locadoratddnlm;
+package br.com.locadoratddnlm.maven;
 
 public class Usuario {
     private String nome;

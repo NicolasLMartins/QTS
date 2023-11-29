@@ -1,4 +1,4 @@
-package br.com.locadoratddnlm;
+package br.com.locadoratddnlm.maven;
 
 public class Filme {
     private String nome;

@@ -2,9 +2,9 @@ package br.com.locadoratddnlm.services;
 
 import java.util.Date;
 import java.util.List;
-import br.com.locadoratddnlm.maven.Filme;
-import br.com.locadoratddnlm.maven.Locacao;
-import br.com.locadoratddnlm.maven.Usuario;
+import br.com.locadoratddnlm.Filme;
+import br.com.locadoratddnlm.Locacao;
+import br.com.locadoratddnlm.Usuario;
 import br.com.locadoratddnlm.exceptions.FilmeSemEstoqueException;
 import br.com.locadoratddnlm.exceptions.LocadoraException;
 import br.com.locadoratddnlm.utils.DataUtils;

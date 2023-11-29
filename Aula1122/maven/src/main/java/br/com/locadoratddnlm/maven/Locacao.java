@@ -1,4 +1,4 @@
-package br.com.locadoratddnlm;
+package br.com.locadoratddnlm.maven;
 
 import java.util.Date;
 import java.util.List;
