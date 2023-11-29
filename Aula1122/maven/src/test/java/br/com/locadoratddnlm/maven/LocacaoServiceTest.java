@@ -82,4 +82,21 @@ public class LocacaoServiceTest {
 		// acao
 		service.alugarFilme(usuario, null);
 	}
+
+	@Test
+	public void devePagar25PorCentoNoTerceiroFilme() throws FilmeSemEstoqueException, LocadoraException{
+		//CENÁRIO
+		Usuario usuario = new Usuario("Usuário 1");
+		List<Filme> filmes = Arrays.asList(
+			new Filme("Filme 1", 2, 4.0),
+			new Filme("Filme 2", 2, 4.0),
+			new Filme("Filme 3", 2, 4.0)
+		);
+	
+		//EXECUÇÃO
+		Locacao resultado = service.alugarFilme(usuario, filmes);
+	
+		//VERIFICAÇÃO
+		assertThat(resultado.getValor(), is(11.0));
+	}
 }
