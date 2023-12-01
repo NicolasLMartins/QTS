@@ -99,4 +99,58 @@ public class LocacaoServiceTest {
 		//VERIFICAÇÃO
 		assertThat(resultado.getValor(), is(11.0));
 	}
+	@Test
+	public void devePagar50PorCentoNoQuartoFilme() throws FilmeSemEstoqueException, LocadoraException{
+		//CENÁRIO
+		Usuario usuario = new Usuario("Usuário 1");
+		List<Filme> filmes = Arrays.asList(
+			new Filme("Filme 1", 2, 4.0),
+			new Filme("Filme 2", 2, 4.0),
+			new Filme("Filme 3", 2, 4.0),
+			new Filme("Filme 4", 2, 4.0)
+		);
+	
+		//EXECUÇÃO
+		Locacao resultado = service.alugarFilme(usuario, filmes);
+	
+		//VERIFICAÇÃO
+		assertThat(resultado.getValor(), is(13.0));
+	}
+	@Test
+	public void devePagar75PorCentoNoQuintoFilme() throws FilmeSemEstoqueException, LocadoraException{
+		//CENÁRIO
+		Usuario usuario = new Usuario("Usuário 1");
+		List<Filme> filmes = Arrays.asList(
+			new Filme("Filme 1", 2, 4.0),
+			new Filme("Filme 2", 2, 4.0),
+			new Filme("Filme 3", 2, 4.0),
+			new Filme("Filme 4", 2, 4.0),
+			new Filme("Filme 5", 2, 4.0)
+		);
+	
+		//EXECUÇÃO
+		Locacao resultado = service.alugarFilme(usuario, filmes);
+	
+		//VERIFICAÇÃO
+		assertThat(resultado.getValor(), is(14.0));
+	}
+	@Test
+	public void devePagar100PorCentoNoSextoFilme() throws FilmeSemEstoqueException, LocadoraException{
+		//CENÁRIO
+		Usuario usuario = new Usuario("Usuário 1");
+		List<Filme> filmes = Arrays.asList(
+			new Filme("Filme 1", 2, 4.0),
+			new Filme("Filme 2", 2, 4.0),
+			new Filme("Filme 3", 2, 4.0),
+			new Filme("Filme 4", 2, 4.0),
+			new Filme("Filme 5", 2, 4.0),
+			new Filme("Filme 6", 2, 4.0)
+		);
+	
+		//EXECUÇÃO
+		Locacao resultado = service.alugarFilme(usuario, filmes);
+	
+		//VERIFICAÇÃO
+		assertThat(resultado.getValor(), is(14.0));
+	}
 }
